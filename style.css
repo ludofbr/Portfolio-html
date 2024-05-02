@@ -1,0 +1,267 @@
+/* PARTIE DE LA PAGE D'ACCUEIL + GENERAL */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #181818;
+  color: #ffffff;
+}
+
+header {
+  background-color: #181818;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Titres de section */
+h2 {
+  border-bottom: 2px solid #1DB954;
+  padding-bottom: 10px;
+}
+h3{
+  text-align: center;
+}
+/* Navigation */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+/* Partie projet pour la page d'accueil */
+.projects {
+  display: grid;
+  background-color: #212121;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #212121;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #181818;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+}
+/* PARTIE DE LA PAGE CONTACT */
+.contact-form {
+  background-color: #212121;
+  color: #ffffff;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.contact-form form {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #1DB954;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #17a143;
+}
+
+/* PARTIE DE LA PAGE A PROPOS */
+
+.img-moi {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.img-moi img {
+  width: 100px; /* ou la taille souhaitée */
+  height: 100px; /* Assurez-vous que la largeur et la hauteur soient égales */
+  border-radius: 50%; /* Cela crée l'effet de cercle */
+  border: 3px solid #ffffff; /* Optionnel: ajoute une bordure blanche */
+}
+
+
+/* Styles spécifiques pour la section à propos */
+.about-section, .experience-section, .education-section, .skills-section, .interests-section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #212121;
+  border-radius: 8px;
+}
+.about-link {
+  color: #17a143;
+  
+}
+.about-link:after {
+  color: #333;
+  
+}
+
+/* Liste stylisée pour les expériences et formations */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* PARTIE DE LA PAGE PROJETS */
+
+.project {
+  background-color: #212121;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.project img {
+  width: 100%; /* Adaptez cette valeur selon vos besoins */
+  height: auto;
+  border-radius: 8px;
+}
+
+.project h2 {
+  margin-top: 10px;
+}
+
+.project p {
+  color: #cccccc;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #1DB954;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project a:hover {
+  background-color: #17a143;
+}
+
+.project h3 {
+  margin-top: 10px;
+}
+
+
+/* PARTIE DE LA PAGE ZAAP */
+
+
+.zaap-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #212121;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.zaap-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.zaap-img {
+  text-align: center; /* Centre l'image dans sa section */
+  margin: 20px 0;
+}
+
+.zaap-img img {
+  width: 100%; /* Ajustez selon la taille désirée */
+  height: auto; /* Garantit que l'image conserve son ratio */
+  max-width: 600px; /* Limite la taille maximale de l'image */
+}
+
+.zaap-project-description {
+  text-align: justify;
+  padding: 0 15px;
+}
+
+.zaap-project-description h2 {
+  color: #1DB954; /* Utilisez une couleur qui se détache sur fond sombre */
+  text-align: center;
+}
+
+.zaap-project-description p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #1DB954;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #17a143;
+}
+
+a.about-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.about-link:hover {
+  text-decoration: underline;
+}
