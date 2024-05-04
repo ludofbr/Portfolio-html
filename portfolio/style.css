@@ -16,8 +16,9 @@
 }
 
 @media (min-width: 768px) {
+  
   .project-card {
-    width: 50%; /* Deux cartes par ligne sur tablette */
+    width: calc(50% - 10px); /* Calcule la largeur pour inclure l'espacement */
   }
   .hamburger {
     display: block; /* Affiche le menu hamburger pour les écrans ≤ 600px */
@@ -123,12 +124,18 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centre les cartes horizontalement */
+  padding: 10px;
+  gap: 10px; /* Espacement entre les cartes */
+}
 /* Cartes de projet */
 .project-card {
   position: relative; /* Ajoutez ceci pour que le positionnement absolu du titre soit relatif à cette carte */
-  display: flex;
-  flex-direction: column;
+  flex: 1 1 200px; /* Flexibilité pour permettre aux cartes de grandir et de rétrécir */
+  margin: 5px; /* Marge autour des cartes */
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
