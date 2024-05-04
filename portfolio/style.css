@@ -1,0 +1,345 @@
+/* Styles responsive pour les écrans plus petits */
+@media (max-width: 600px) {
+  nav ul li {
+    display: block; /* Les liens s'affichent verticalement */
+  }
+  nav ul li a {
+    padding: 10px; /* Un peu plus d'espacement */
+  }
+}
+@media (min-width: 1024px) {
+  .project-card {
+    width: 33.333%; /* Trois cartes par ligne sur les écrans de bureau */
+  }
+}
+@media (min-width: 768px) {
+  .project-card {
+    width: 50%; /* Deux cartes par ligne sur tablette */
+  }
+}
+/* Styles de base et typographie */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Fond gris très clair pour tout le corps */
+  color: #333; /* Texte en gris foncé pour une bonne lisibilité */
+}
+
+header {
+  background-color: #ffffff; /* Fond blanc pour l'en-tête */
+  color: #000000; /* Texte noir pour une meilleure lisibilité */
+  padding: 10px 20px; /* Ajustement des espacements */
+  text-align: center;
+  border-bottom: 1px solid #d1d1d1; /* Ligne de séparation subtile */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #0056b3; /* Bleu pour le survol, à ajuster selon votre palette de couleurs */
+}
+.link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold; /* Rend le texte plus lisible et accentué */
+  transition: color 0.3s;
+}
+
+.link:hover{
+  color: #0056b3; /* Bleu pour le survol, à ajuster selon votre palette de couleurs */
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .active nav ul {
+    display: block;
+  }
+}
+/* Section principale */
+.main {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Cartes de projet */
+.project-card {
+  position: relative; /* Ajoutez ceci pour que le positionnement absolu du titre soit relatif à cette carte */
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  width: 100%; /* Adaptatif pour toutes tailles d'écran */
+  max-width: 310px; /* Largeur maximale pour les écrans plus grands */
+  height: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  order: 2;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-title {
+  position: absolute; /* Positionnement absolu pour le titre */
+  bottom: 0; /* Positionne le titre en bas de la carte */
+  left: 0; /* Aligné à gauche */
+  width: 100%; /* Assurez-vous que le titre s'étend sur toute la largeur de la carte */
+  background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour le titre */
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  padding: 10px 0; /* Ajoutez un peu de padding vertical */
+  z-index: 2; /* Assure que le titre est au-dessus des autres éléments */
+}
+
+
+/* Boutons et liens */
+button, .button {
+  background-color: #007bff; /* Bleu pour les boutons */
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover, .button:hover {
+  background-color: #0056b3; /* Bleu plus foncé pour le hover */
+}
+
+/* Pied de page */
+footer {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  padding: 5px 0;
+  border-top: 1px solid #ddd;
+}
+
+footer p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.projets-box {
+  background-color: #ffffff; /* Fond blanc pour la carte */
+  border: 1px solid #ddd; /* Bordure subtile */
+  border-radius: 8px;
+  padding: 20px; /* Espacement intérieur */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Ombre pour donner du relief */
+  margin: 20px 0; /* Marge autour de la carte */
+}
+
+.projets-desc {
+  background-color: #eef2f5; /* Couleur de fond différente pour la description */
+  padding: 15px; /* Espacement intérieur */
+  border-radius: 5px; /* Coins arrondis pour la section de description */
+}
+
+.projets-box h2 {
+  color: #6f42c1; /* Couleur des titres (violet) */
+  margin-top: 15px; /* Espace au-dessus du titre */
+}
+
+.projets-box p {
+  color: #666; /* Gris foncé pour le texte */
+  padding: 10px 0; /* Espacement autour du paragraphe */
+}
+
+.projets-box a.link {
+  display: inline-block;
+  background-color: #007bff; /* Bleu pour le fond du lien */
+  color: #ffffff; /* Texte blanc pour contraste */
+  text-decoration: none; /* Enlève le soulignement */
+  padding: 10px 15px; /* Espacement intérieur du lien */
+  border-radius: 5px; /* Coins arrondis du lien */
+  transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.projets-box a.link:hover {
+  background-color: #0056b3; /* Bleu plus foncé pour le survol */
+}
+.about-box {
+  background-color: #ffffff; /* Fond blanc pour la carte */
+  border: 1px solid #ddd; /* Bordure subtile */
+  border-radius: 8px;
+  padding: 20px; /* Espacement intérieur */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Ombre pour donner du relief */
+  margin: 20px 0; /* Marge autour de la carte */
+}
+
+.about-desc {
+  background-color: #eef2f5; /* Couleur de fond différente pour la description */
+  padding: 15px; /* Espacement intérieur */
+  border-radius: 5px; /* Coins arrondis pour la section de description */
+}
+
+.about-box h2 {
+  color: #6f42c1; /* Couleur des titres (violet) */
+  margin-top: 15px; /* Espace au-dessus du titre */
+  text-decoration: underline;
+}
+
+.about-box p {
+  color: #666; /* Gris foncé pour le texte */
+  padding: 10px 0; /* Espacement autour du paragraphe */
+}
+/* .about-img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.about-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Si vous voulez une image ronde 
+} */
+.zaap-box {
+  background-color: #ffffff; /* Fond blanc pour la carte */
+  border: 1px solid #ddd; /* Bordure subtile */
+  border-radius: 8px;
+  padding: 20px; /* Espacement intérieur */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Ombre pour donner du relief */
+  margin: 20px 0; /* Marge autour de la carte */
+}
+
+.zaap-desc {
+  margin-top: 10px;
+  background-color: #eef2f5; /* Couleur de fond différente pour la description */
+  padding: 15px; /* Espacement intérieur */
+  border-radius: 5px; /* Coins arrondis pour la section de description */
+}
+
+.zaap-box h2 {
+  text-align: center;
+  color: #6f42c1; /* Couleur des titres (violet) */
+  margin-top: 15px; /* Espace au-dessus du titre */
+}
+.zaap-box img {
+  width: 100%;
+  height: auto;
+}
+.zaap-box p {
+  color: #666; /* Gris foncé pour le texte */
+  padding: 10px 0; /* Espacement autour du paragraphe */
+}
+
+.zaap-img {
+  display: flex;
+  justify-content: center; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement si nécessaire */
+}
+
+/* Styles pour la box de contact */
+.contact-box {
+  background-color: #ffffff; /* Fond blanc pour la clarté */
+  padding: 30px; /* Espacement généreux pour une apparence aérée */
+  border-radius: 8px; /* Coins arrondis pour la douceur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile pour la profondeur */
+  max-width: 600px; /* Largeur maximale pour un meilleur contrôle de la mise en page */
+  margin: 40px auto; /* Centrage avec un peu d'espace vertical */
+}
+
+/* Styles pour les labels et les champs de formulaire */
+.contact-box label {
+  display: block; /* Rend les labels des blocs pour un meilleur contrôle de la mise en page */
+  margin-bottom: 5px; /* Petite marge en dessous pour la séparation */
+  color: #333; /* Texte gris foncé pour le contraste */
+  font-weight: bold; /* Rendre le texte un peu plus gras */
+}
+
+.contact-box input, .contact-box textarea {
+  width: 100%; /* Utilise toute la largeur disponible */
+  padding: 10px; /* Un peu de padding pour rendre la saisie plus confortable */
+  margin-bottom: 20px; /* Espace après chaque champ */
+  border: 1px solid #ccc; /* Bordure subtile */
+  border-radius: 4px; /* Coins légèrement arrondis */
+}
+
+.contact-box textarea {
+  resize: none; /* Empêche l'utilisateur de redimensionner la zone de texte */
+}
+
+/* Styles pour le bouton */
+.contact-box button {
+  width: 100%; /* Le bouton s'étend sur toute la largeur du champ */
+  padding: 12px 20px; /* Padding généreux pour un clic facile */
+  background-color: #007bff; /* Bleu vif pour le bouton d'envoi */
+  color: white; /* Texte blanc pour la lisibilité */
+  border: none; /* Aucune bordure */
+  border-radius: 4px; /* Coins légèrement arrondis */
+  cursor: pointer; /* Curseur pointeur pour indiquer l'action */
+  transition: background-color 0.3s; /* Transition pour un effet au survol */
+}
+
+.contact-box button:hover {
+  background-color: #0056b3; /* Bleu plus foncé au survol pour un effet visuel */
+}
+
+/* Styles pour la notification */
+.notification {
+  background-color: #007bff; /* Couleur de fond vert succès */
+  color: #ffffff; /* Texte en blanc */
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 30px; /* Espacement depuis le haut */
+  border-radius: 4px; /* Coins arrondis */
+  border-left: 5px solid #0056b3; /* Bordure à gauche plus foncée */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Ombre légère pour effet 3D */
+  display: none; /* Caché par défaut */
+}
